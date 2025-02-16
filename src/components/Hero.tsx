@@ -6,6 +6,7 @@ const Hero = () => {
   const router = useRouter();
 
   //Added comments to the hero section
+  //Added comments another section of the hero
 
   return (
     <div className="hero">
