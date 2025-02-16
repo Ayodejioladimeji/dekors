@@ -15,7 +15,6 @@
 
 # production
 /build
-/src/pages/api/
 
 # misc
 .DS_Store
