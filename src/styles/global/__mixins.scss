@@ -1,0 +1,156 @@
+@mixin common-text-primary {
+  font-family: $primary-font-normal;
+  color: #6e7191;
+}
+
+@mixin heading($size, $weight, $color) {
+  font-family: $primary-font;
+  font-size: $size;
+  padding: 0;
+  margin: 0;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin body-text($size, $weight, $color) {
+  font-family: $primary-font;
+  font-size: $size;
+  color: $color;
+  padding: 0;
+  margin: 0;
+  font-weight: $weight;
+}
+
+@mixin input($border: none) {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid $border;
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  border-radius: 5px;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(51, 51, 51, 0.5);
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(51, 51, 51, 0.5);
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(51, 51, 51, 0.5);
+  }
+}
+
+@mixin select($background, $border: none) {
+  background: $background;
+  border: 1px solid $border;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a0a3bd;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a0a3bd;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a0a3bd;
+  }
+}
+
+@mixin textarea($background, $border) {
+  background: $background;
+  border: 1px solid $border;
+  padding: 15px;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a0a3bd;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+@mixin buttons($color) {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $primary-font;
+  background: $color;
+  border: none;
+  transition: $transitions;
+  color: $white;
+  font-weight: 500;
+
+  &:hover {
+    background: #27493eb2;
+  }
+
+  @media (max-width: 767px) {
+    border-radius: 10px;
+  }
+}
+
+@mixin round-image($size) {
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  img {
+    height: auto;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: top;
+    width: 100% !important;
+  }
+
+  @if $size ==42px {
+    border: 1px solid $border-color;
+  }
+
+  @if $size ==48px {
+    border: 2px solid #e0e2f0;
+  }
+}

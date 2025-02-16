@@ -1,0 +1,299 @@
+.product-details {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  .heading-section {
+    height: 50px;
+    font-weight: 500;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+
+  //   content
+  .content {
+    margin-bottom: 80px;
+
+    @media (min-width: 576px) {
+      margin-top: 40px;
+    }
+
+    // image section
+
+    .detail-image {
+      height: 450px;
+      width: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid $border-color;
+      background: $border-color;
+
+      @media (max-width: 767px) {
+        border-radius: 10px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .thumb {
+      overflow: auto;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      @media (max-width: 575px) {
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        column-gap: 10px;
+      }
+
+      .image-box {
+        height: 80px;
+        width: 90px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid $border-color;
+        background: $border-color;
+
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+
+        @media (max-width: 575px) {
+          margin-top: 20px;
+          width: 85px;
+        }
+
+        &.image-active {
+          border: 2px solid $primary-color;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // right section
+    .content-details {
+      @media (max-width: 991px) {
+        margin-top: 40px;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+
+        h1 {
+          @include heading(30px, 600, $text-color);
+          line-height: 40px;
+
+          @media (max-width: 11400px) {
+            font-size: 27px;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 24px;
+            line-height: 35px;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+
+      p {
+        @include body-text(16px, 400, $text-color);
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        @include heading(24px, 600, $text-color);
+        margin-bottom: 12px;
+      }
+
+      h4 {
+        @include heading(20px, 600, $text-color);
+        margin-bottom: 12px;
+      }
+
+      .color-div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        margin-bottom: 12px;
+
+        .main-color {
+          padding: 10px 0;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          height: 35px;
+          width: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: var(--transition);
+        }
+
+        .actual-color {
+          height: 28px;
+          width: 28px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 1px solid $border-color;
+        }
+
+        .active-color {
+          border: 2px solid $primary-color;
+          padding: 10px 0;
+          border-radius: 50%;
+          height: 35px;
+          width: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: var(--transition);
+        }
+      }
+
+      .quantities {
+        border: 1px solid $primary-color;
+        border-radius: 8px;
+        padding: 0px;
+        width: 129px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 40px;
+        transition: $transitions;
+
+        p {
+          margin: 0;
+        }
+
+        .bi {
+          display: block;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        margin-top: 40px;
+
+        button {
+          @include buttons($primary-color);
+          height: 50px;
+          width: 170px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+          border-radius: 10px;
+          font-size: 16px;
+
+          &:first-child {
+            background: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+
+            &:hover {
+              background: #68807833;
+            }
+          }
+
+          @media (max-width: 500px) {
+            width: 100%;
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+  //   information section
+  .information {
+    margin-top: 30px;
+    overflow: auto;
+
+    .top {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+      border-radius: 4px;
+      margin-bottom: 40px;
+
+      @media (max-width: 500px) {
+        width: 500px;
+      }
+
+      button {
+        @include body-text(20px, 400, $text-color);
+        background: transparent;
+        border: none;
+        padding-bottom: 10px;
+        border-bottom: 4px solid transparent;
+        transition: $transitions;
+
+        &.active {
+          border-bottom: 4px solid $primary-color;
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: 24px;
+
+      .policy,
+      .description {
+        h4 {
+          @include heading(20px, 600, $text-color);
+          margin-bottom: 16px;
+        }
+        p {
+          @include body-text(16px, 400, $text-color);
+          margin-bottom: 16px;
+          line-height:35px;
+        }
+
+        ol {
+          padding-left: 20px;
+
+          li {
+            @include body-text(16px, 400, $text-color);
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}

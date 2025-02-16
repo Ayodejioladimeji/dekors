@@ -1,0 +1,45 @@
+// import global files
+
+@import "./global/__fonts";
+@import "./global/__colors";
+@import "./global/_mixins";
+@import "./global/__resets";
+
+// components
+@import "./components/__navbar";
+@import "./components/__footer";
+@import "./components/__hero";
+@import "./components/__products";
+@import "./components/__heading";
+@import "./components/__categories";
+@import "./components/__top-deals";
+@import "./components/__similar-product";
+@import "./components/__testimonial";
+@import "./components/__paginate";
+
+// common
+@import "./common/__productcard";
+@import "./common/__successmodal";
+
+// pages
+@import "./pages/__product-details";
+@import "./pages/__cart";
+@import "./pages/__all-products";
+@import "./pages/__checkout";
+@import "./pages/__login";
+@import "./pages/__activate";
+@import "./pages/__all-categories";
+
+// dashboard pages
+@import "./dashboard/pages/__orders";
+@import "./dashboard/pages/__payments";
+@import "./dashboard/pages/__settings";
+@import "./dashboard/pages/__addresses";
+@import "./dashboard/pages/__addproduct";
+@import "./dashboard/pages/__overview";
+
+// dashboard components
+@import "./dashboard/components/__navbar";
+@import "./dashboard/components/__confirmmodal";
+@import "./dashboard/components/__addressmodal";
+@import "./dashboard/components/__categorycard";

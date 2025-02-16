@@ -1,0 +1,178 @@
+/* Navbar Styling */
+.home-navbar {
+  background: $white;
+  position: fixed;
+  width: 100%;
+
+  .main-container {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+
+    .navbar-brand {
+      border: none !important;
+
+      @media (max-width: 500px) {
+        svg {
+          width: 70px !important;
+          margin-top: -5px;
+        }
+      }
+    }
+
+    .mobile-navbar {
+      column-gap: 20px;
+      list-style-type: none;
+      display: none;
+      margin: 0;
+      align-items: center;
+
+      @media (max-width: 991px) {
+        display: flex;
+        padding-left: 0px;
+      }
+
+      @media (max-width: 278px) {
+        margin-top: 10px;
+      }
+
+      .nav-item {
+        cursor: pointer;
+        position: relative;
+
+        svg {
+          font-size: 5px;
+          height: 20px;
+          width: 20px;
+        }
+
+        .badge {
+          height: 18px;
+          max-width: 18px;
+          border-radius: 50%;
+          background: $primary-color;
+          color: $white;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 11px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .home-navbar-nav {
+      margin: 0;
+
+      &.web-nav {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 992px) {
+        &:first-child {
+          margin-top: 20px;
+        }
+      }
+
+      &:last-child {
+        margin-top: 0;
+      }
+
+      .nav-item {
+        margin-right: 25px;
+        cursor: pointer;
+        position: relative;
+
+        @media (min-width: 992px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .nav-link {
+          font-size: 18px;
+          border: none !important;
+          font-weight: 400;
+          cursor: pointer;
+
+          @media (max-width: 500px) {
+            font-size: 16px;
+          }
+
+          span {
+            &:focus {
+              outline: none !important;
+              box-shadow: none !important;
+              border: none !important;
+            }
+          }
+        }
+
+        .active {
+          color: $button-color;
+          font-weight: 700;
+        }
+
+        .badge {
+          height: 18px;
+          max-width: 18px;
+          border-radius: 50%;
+          background: $primary-color;
+          color: $white;
+          position: absolute;
+          top: -5px;
+          right: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+
+    .toggle-section {
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+
+      @media (max-width: 500px) {
+        column-gap: 10px;
+      }
+    }
+
+    .navbar-toggler {
+      border: none !important;
+      color: $black;
+      padding: 0;
+
+      @media (max-width: 500px) {
+        font-size: 16px;
+      }
+    }
+
+    .usercard {
+      img {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        @media (max-width: 350px) {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}
